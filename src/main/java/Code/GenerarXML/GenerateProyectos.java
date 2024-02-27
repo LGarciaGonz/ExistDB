@@ -88,7 +88,7 @@ public class GenerateProyectos {
                 }
 
                 // Mensaje de éxito
-                System.out.println("\t\n>>> Datos CENTROS generados");
+                System.out.println("\t\n>>> Datos PROYECTOS generados");
 
                 // Cerrar la conexión con la colección
                 col.close();
