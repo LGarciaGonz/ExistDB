@@ -3,6 +3,7 @@ package Code.GenerarXML;
 import Conexiones.CollectionConexion;
 import org.xmldb.api.base.*;
 import org.xmldb.api.modules.XPathQueryService;
+
 import javax.xml.transform.*;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
@@ -82,11 +83,11 @@ public class GenerateCentros {
                     transformer.transform(source, result1);
 
                 } catch (TransformerException e) {
-                    throw new RuntimeException(e);
+                    System.err.println("\n>>> Error en la transformación.");
                 }
 
                 // Mensaje de éxito
-                System.out.println("\t\n>>> Datos generados");
+                System.out.println("\t\n>>> Datos CENTROS generados");
 
                 // Cerrar la conexión con la colección
                 col.close();

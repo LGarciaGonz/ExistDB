@@ -30,13 +30,13 @@ public class GenerateProyectos {
                 "    for $row in $xml//Row\n" +
                 "    return\n" +
                 "        <Proyecto>\n" +
-                "            <CENTROCOORDINADOR>{data($row/CENTROCOORDINADOR)}</CENTROCOORDINADOR>\n" +
-                "            <TÍTULODELPROYECTO>{data($row/TÍTULODELPROYECTO)}</TÍTULODELPROYECTO>\n" +
-                "            <AUTORIZACIÓN>{data($row/AUTORIZACIÓN)}</AUTORIZACIÓN>\n" +
-                "            <CONTINUIDAD>{data($row/CONTINUIDAD)}</CONTINUIDAD>\n" +
-                "            <COORDINACIÓN>{data($row/COORDINACIÓN)}</COORDINACIÓN>\n" +
-                "            <CONTACTO>{data($row/CONTACTO)}</CONTACTO>\n" +
-                "            <CENTROSANEXIONADOS>{data($row/CENTROSANEXIONADOS)}</CENTROSANEXIONADOS>\n" +
+                "            <CENTRO_COORDINADOR>{data($row/CENTROCOORDINADOR)}</CENTRO_COORDINADOR>\n" +
+                "            <TÍTULO_DEL_PROYECTO>{data($row/TÍTULODELPROYECTO)}</TÍTULO_DEL_PROYECTO>\n" +
+                "            <FECHA_INICIO>{data($row/AUTORIZACIÓN)}</FECHA_INICIO>\n" +
+                "            <FECHA_FIN>{data($row/CONTINUIDAD)}</FECHA_FIN>\n" +
+                "            <USER_MANAGER>{data($row/COORDINACIÓN)}</USER_MANAGER>\n" +
+                "            <USER_EMAIL>{data($row/CONTACTO)}</USER_EMAIL>\n" +
+                "            <CENTROS_ANEXIONADOS>{data($row/CENTROSANEXIONADOS)}</CENTROS_ANEXIONADOS>\n" +
                 "        </Proyecto>\n" +
                 "}</Proyectos>";
 
@@ -86,6 +86,9 @@ public class GenerateProyectos {
                 } catch (TransformerException e) {
                     System.err.println("\n>>> Error en la transformación.");
                 }
+
+                // Mensaje de éxito
+                System.out.println("\t\n>>> Datos CENTROS generados");
 
                 // Cerrar la conexión con la colección
                 col.close();

@@ -85,7 +85,7 @@ public class GenerateFamilias {
                 }
 
                 // Mensaje de éxito
-                System.out.println("\t\n>>> Datos generados");
+                System.out.println("\t\n>>> Datos FAMILIAS generados");
 
                 // Cerrar la conexión con la colección
                 col.close();
